@@ -7,9 +7,15 @@
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
+    <style>
+      body {
+          background-color: black; /* 배경색을 검정색으로 설정합니다. */
+          color: white; /* 텍스트 색상을 흰색으로 설정합니다. */
+      }
+</style>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=540></canvas>
+      <canvas id="unity-canvas" width=1920 height=1080></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -56,11 +62,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/ProjectVT_Build.loader.js";
+      var loaderUrl = buildUrl + "/ProjectVT.loader.js";
       var config = {
-        dataUrl: buildUrl + "/ProjectVT_Build.data",
-        frameworkUrl: buildUrl + "/ProjectVT_Build.framework.js",
-        codeUrl: buildUrl + "/ProjectVT_Build.wasm",
+        dataUrl: buildUrl + "/ProjectVT.data",
+        frameworkUrl: buildUrl + "/ProjectVT.framework.js",
+        codeUrl: buildUrl + "/ProjectVT.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "ProjectVT",
@@ -93,8 +99,8 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "960px";
-        canvas.style.height = "540px";
+        canvas.style.width = "1920px";
+        canvas.style.height = "1080px";
       }
 
       loadingBar.style.display = "block";
